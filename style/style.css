@@ -1,0 +1,633 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/**llamado a las tipografias por css**/
+/* 
+mis fuentes
+font-family: 'Anton', sans-serif;
+font-family: 'Lato', sans-serif;
+*/
+/*
+colores
+#006845
+#083526
+*/
+nav {
+  list-style: none;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media screen and (min-width: 600px) {
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+nav ul li {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+nav ul li:hover {
+  transform: scale(1.2);
+  transition: all 1s;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 600px) {
+  nav ul li {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  nav ul li {
+    font-size: 2rem;
+  }
+}
+
+.nosotros {
+  background: rgb(13, 70, 51);
+  background: linear-gradient(0deg, rgb(13, 70, 51) 1%, rgb(13, 70, 51) 35%, rgba(8, 41, 29, 0.914) 63%, rgba(0, 0, 0, 0.782) 94%);
+  text-align: center;
+  font-family: "Anton", sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.imgTitulo {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 2rem;
+  border-radius: 0rem 0rem 5rem 5rem;
+}
+
+.textoPortada {
+  font-size: 6rem;
+}
+
+.gridsInicio {
+  width: 100%;
+}
+
+.texto1, .texto2, .texto3 {
+  background-color: #006845;
+  color: whitesmoke;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  padding: 2rem 2rem;
+}
+
+.imgPortada {
+  width: 100%;
+  height: 100%;
+}
+
+.videoIndex {
+  margin: 0 auto;
+  width: 95%;
+  height: 30rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+@media screen and (min-width: 600px) {
+  .gridsInicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "foto1 texto1" "texto2 foto2" "foto3 texto3";
+  }
+  .texto1, .texto2, .texto3 {
+    grid-area: texto1;
+  }
+  .foto1 {
+    grid-area: foto1;
+  }
+  .texto2 {
+    grid-area: texto2;
+  }
+  .foto2 {
+    grid-area: foto2;
+  }
+  .texto3 {
+    grid-area: texto3;
+  }
+  .foto3 {
+    grid-area: foto3;
+  }
+  .texto1, .texto2, .texto3 {
+    font-size: 1.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  .videoIndex {
+    width: 600px;
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .gridsInicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "foto1 texto1 foto2" "texto2 foto3 texto3 " "videoIndex videoIndex videoIndex";
+  }
+  .texto1, .texto2, .texto3 {
+    font-size: 2rem;
+  }
+  .videoIndex {
+    width: 80rem;
+    height: 40rem;
+  }
+}
+.grillaServicios {
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 600px) {
+  .grillaServicios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "servicosCard1 servicosCard2" "servicosCard3 servicosCard4";
+  }
+}
+@media screen and (min-width: 992px) {
+  .grillaServicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "servicosCard1 servicosCard2 servicosCard3 servicosCard4";
+  }
+}
+
+.servicosCard1 {
+  grid-area: servicosCard1;
+}
+
+.servicosCard2 {
+  grid-area: servicosCard2;
+}
+
+.servicosCard3 {
+  grid-area: servicosCard3;
+}
+
+.servicosCard4 {
+  grid-area: servicosCard4;
+}
+
+.textoS {
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+}
+
+.textoServicios {
+  color: white;
+  background-color: #006845;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 2rem;
+  border: 3px solid rgba(0, 0, 0, 0.321);
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding: 15px 15px;
+}
+@media screen and (min-width: 600px) {
+  .textoServicios {
+    font-size: 1.7rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .textoServicios {
+    font-size: 1.9rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+.boxServicos {
+  height: 90%;
+  width: 90%;
+  background-color: #006845;
+  margin: 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+  border: 3px solid rgba(0, 0, 0, 0.321);
+  border-radius: 2rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: whitesmoke;
+}
+@media screen and (min-width: 600px) {
+  .boxServicos {
+    height: 95%;
+  }
+}
+
+.imagenS {
+  width: 80%;
+  margin-bottom: 5px;
+}
+
+.imagenS:hover {
+  transform: translatex(10px);
+}
+
+.mpCard {
+  background-color: #006845;
+  border: 3px solid rgba(0, 0, 0, 0.321);
+  border-radius: 2rem;
+  color: white;
+  margin: 3rem 3rem;
+  padding: 15px 15px;
+}
+
+.mediosdePago {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+}
+
+.imgMedios {
+  width: 12rem;
+  margin: 15px 15px;
+}
+
+.pictureMP {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.grillaProductos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 600px) {
+  .grillaProductos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "pUno pDos" "pTres pCuatro" "pCinco pSeis";
+  }
+}
+@media screen and (min-width: 992px) {
+  .grillaProductos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "pUno pDos pTres" "pCuatro pCinco pSeis";
+  }
+}
+
+.pUno {
+  grid-area: pUno;
+}
+
+.pDos {
+  grid-area: pDos;
+}
+
+.pTres {
+  grid-area: pTres;
+}
+
+.pCuatro {
+  grid-area: pCuatro;
+}
+
+.pCinco {
+  grid-area: pCinco;
+}
+
+.pSeis {
+  grid-area: pSeis;
+}
+
+.productos {
+  width: 80%;
+  height: 98%;
+  background-color: #006845;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  border: 3px solid rgba(0, 0, 0, 0.321);
+  border-radius: 2rem;
+  padding: 1rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  color: white;
+}
+
+.imgM {
+  width: 100%;
+}
+
+.carruCenter {
+  width: 90%;
+  margin: 10px 10px;
+}
+@media screen and (min-width: 600px) {
+  .carruCenter {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .carruCenter {
+    margin-left: 5rem;
+  }
+}
+
+.imagenProducto {
+  width: 100%;
+}
+
+.tituloNew {
+  margin-top: 2rem;
+}
+
+.contactoBox {
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) {
+  .contactoBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "formularioCaja telMail" "formularioCaja mapa";
+  }
+}
+@media screen and (min-width: 992px) {
+  .contactoBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "formularioCaja telMail" "formularioCaja mapa";
+  }
+}
+
+.formularioCaja {
+  grid-area: formularioCaja;
+}
+
+.telMail {
+  grid-area: telMail;
+  height: 14rem;
+  color: white;
+  background-color: #006845;
+  font-family: "Lato", sans-serif;
+  padding: 2rem 2rem 2rem 2rem;
+  margin: 1rem 1rem 1rem 1rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 600px) {
+  .telMail {
+    font-size: 1rem;
+    height: 30rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .telMail {
+    font-size: 2rem;
+  }
+}
+
+.formulario {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1.8rem;
+  background-color: #006845;
+  height: auto;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.iconosContacto {
+  width: 5%;
+}
+
+.mapa {
+  grid-area: mapa;
+  padding: 1rem 1rem 1rem 1rem;
+  height: 35rem;
+}
+@media screen and (min-width: 600px) {
+  .mapa {
+    height: 40rem;
+  }
+}
+.cardNew {
+  height: auto;
+  width: 80;
+  background-color: #006845;
+  border: 3px solid rgba(0, 0, 0, 0.321);
+  border-radius: 2rem;
+  margin: 5rem 5rem 5rem 5rem;
+  padding: 1rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  color: white;
+}
+@media screen and (min-width: 600px) {
+  .cardNew {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cardNew {
+    font-size: 1.8rem;
+  }
+}
+
+.imagenNew {
+  width: 100%;
+}
+
+.galeriaNew {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+@media screen and (min-width: 600px) {
+  .galeriaNew {
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 992px) {
+  .galeriaNew {
+    font-size: 1.8rem;
+  }
+}
+
+.imgGaleria {
+  width: 100%;
+}
+
+.tituloNew {
+  font-family: "Lato", sans-serif;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.parrafoNew {
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+  padding: 2px 10px 2px 10px;
+}
+
+.whatsaap {
+  float: right;
+  position: sticky;
+  z-index: 10;
+  bottom: 2rem;
+  margin-top: -22vh;
+  margin-right: 3rem;
+}
+.whatsaap:hover {
+  transform: rotate(360deg);
+  transition: all 3s;
+}
+
+.icionoWhat {
+  width: 80%;
+}
+@media screen and (min-width: 600px) {
+  .icionoWhat {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .icionoWhat {
+    width: 100%;
+  }
+}
+
+footer {
+  color: aliceblue;
+  padding-top: 20px;
+  font-size: 1.5rem;
+  margin: 0px auto;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 10%, rgb(5, 28, 20) 56%, rgb(13, 70, 51) 96%, rgb(13, 70, 51) 100%);
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.subir {
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+.subir:hover {
+  transform: scale(1.1);
+}
+
+.redes {
+  width: 26rem;
+  margin-top: 2px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-right: solid white 1px;
+  border-left: solid white 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.links {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 600px) {
+  .links {
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 992px) {
+  .links {
+    width: 100rem;
+  }
+}
+
+.resena:hover {
+  transform: scale(1.1);
+}
+
+.redesI:hover {
+  transform: scale(1.1);
+}
+
+.mercado:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 600px) {
+  .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.pieGirau {
+  margin-top: 2px;
+  margin-bottom: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

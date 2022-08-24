@@ -1,0 +1,95 @@
+.nosotros{
+    background: rgb(13,70,51);
+    background: linear-gradient(0deg, rgba(13,70,51,1) 1%, rgba(13,70,51,1) 35%, rgba(8, 41, 29, 0.914) 63%, rgba(0, 0, 0, 0.782) 94%);
+    text-align: center;
+    font-family: $titulo_font;
+    font-weight: bold;
+    color: white;
+}
+.imgTitulo{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2rem;
+    border-radius: 0rem 0rem 5rem 5rem;
+}
+.textoPortada{
+    font-size: 6rem;
+}
+.gridsInicio{
+    width: 100%;
+}
+.texto1{
+background-color: #006845;
+color: whitesmoke;
+height: 100%;
+font-family: $font_general;
+font-size: 1.8rem;
+padding: 2rem 2rem;
+}
+.imgPortada{
+    width: 100%;
+    height: 100%;
+}
+.videoIndex{
+    margin: 0 auto;
+    width: 95%;
+    height: 30rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+@media screen and (min-width: 600px){
+    .gridsInicio{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "foto1 texto1"
+        "texto2 foto2"
+        "foto3 texto3";
+    }
+    .texto1{
+        grid-area: texto1;
+        }
+        .foto1{
+        grid-area: foto1;
+        }
+        .texto2{
+        grid-area: texto2;
+        }
+        .foto2{
+        grid-area: foto2;
+        }
+        .texto3{
+        grid-area: texto3;
+        }
+        .foto3{
+        grid-area: foto3;
+        }
+    .texto1, .texto2, .texto3{
+        font-size: 1.9rem;
+        @include flexCenterColumn;
+        padding: 2rem 2rem 2rem 2rem;
+        }
+    .videoIndex{
+    width: 600px;
+    height: 300px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .gridsInicio{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "foto1 texto1 foto2"
+        "texto2 foto3 texto3 "
+        "videoIndex videoIndex videoIndex";
+    }
+    .texto1, .texto2, .texto3{
+        font-size: 2rem;
+        }
+    .videoIndex{
+        width: 80rem;
+        height: 40rem;
+    }
+}

@@ -1,0 +1,58 @@
+footer{
+    color: aliceblue;
+    padding-top: 20px;
+    font-size: 1.5rem;
+    margin: 0px auto;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(5,28,20,1) 56%, rgba(13,70,51,1) 96%, rgba(13,70,51,1) 100%);
+    font-family: 'Lato',sans-serif; 
+    @include flexCenterColumn;
+}
+.subir{
+    margin-top: 6px;
+    margin-bottom: 2px;
+    &:hover{
+    transform: scale(1.1);
+    }
+}
+.redes{
+    width: 26rem;
+    margin-top: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-right: solid white 1px;
+    border-left: solid white 1px;
+    @include flexspace;
+}
+.links{
+    margin-top: 5px;
+    @include flexCenterColumn;
+    @include tablet{
+        width: 97%;
+        @include flexspace;
+    }
+    @include descktop{
+        width: 100rem;
+    }
+}
+.resena:hover{
+    transform: scale(1.1);
+}
+.redesI{
+    &:hover{
+    transform: scale(1.1);
+}
+}
+.mercado:hover{
+    transform: scale(1.1);
+}
+@include tablet{
+    .links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.pieGirau{
+    margin-top: 2px;
+    margin-bottom: 15px;
+}

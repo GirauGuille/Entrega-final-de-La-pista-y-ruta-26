@@ -1,0 +1,21 @@
+.whatsaap{
+    float: right;
+    position: sticky;
+    z-index: 10;
+    bottom: 2rem;
+    margin-top: -22vh;
+    margin-right: 3rem;
+    &:hover{
+        transform: rotate(360deg);
+        transition: all 3s;
+    }
+}
+.icionoWhat{
+    width: 80%;
+    @include tablet{
+        width: 90%;
+    }
+    @include descktop{
+        width: 100%;
+    }
+}

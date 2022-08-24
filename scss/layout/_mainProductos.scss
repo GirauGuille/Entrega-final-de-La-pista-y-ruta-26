@@ -1,0 +1,72 @@
+.grillaProductos{
+    @include flexCenterColumn;
+    @include tablet{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "pUno pDos"
+        "pTres pCuatro"
+        "pCinco pSeis";
+    }
+    @include descktop{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "pUno pDos pTres"
+        "pCuatro pCinco pSeis";
+    }
+}
+.pUno{
+    grid-area: pUno;
+} 
+.pDos{
+    grid-area: pDos;
+} 
+.pTres{
+    grid-area: pTres;
+} 
+.pCuatro{
+    grid-area: pCuatro;
+} 
+.pCinco{
+    grid-area: pCinco;
+} 
+.pSeis{
+    grid-area: pSeis;
+}
+.productos{
+    width: 80%;
+    height: 98%;
+    background-color: #006845;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    border: 3px solid rgba(0, 0, 0, 0.321);
+    border-radius: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato',sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+}
+.imgM{
+    width: 100%;
+}
+.carruCenter{
+    width:90%;
+    margin: 10px 10px;
+    @include tablet{
+        width: 80%;
+    }
+    @include descktop{
+        margin-left: 5rem;
+    }
+}
+.imagenProducto{
+    width: 100%;
+}
+.tituloNew{
+    margin-top: 2rem;
+}

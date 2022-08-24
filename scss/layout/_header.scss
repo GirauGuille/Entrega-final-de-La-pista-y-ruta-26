@@ -1,0 +1,37 @@
+nav{
+    list-style: none;
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-end;
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+            li{
+                text-align: center;
+                font-family: $font_general;
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                &:hover{
+                    transform: scale(1.2);
+                    transition: all 1s;
+                }
+                a{
+                    text-decoration: none;
+                    color: rgb(255, 255, 255);
+                }
+                @include tablet{
+                    font-size: 1.5rem;
+                }
+                @include descktop{
+                    font-size: 2rem;
+                }
+            }
+    }
+}

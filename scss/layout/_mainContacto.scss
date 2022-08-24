@@ -1,0 +1,68 @@
+.contactoBox{
+    width: 100%;
+    margin: 0 auto;
+    @include tablet{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "formularioCaja telMail"
+        "formularioCaja mapa"
+        ;
+    }
+    @include descktop{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "formularioCaja telMail"
+        "formularioCaja mapa"
+        ;
+    }
+}
+.formularioCaja{
+    grid-area: formularioCaja;
+}
+.telMail{
+    grid-area: telMail;
+    height: 14rem;
+    color: white;
+    background-color: #006845;
+    font-family: 'Lato',sans-serif;
+    padding: 2rem 2rem 2rem 2rem;
+    margin: 1rem 1rem 1rem 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablet{
+        font-size: 1rem;
+        height: 30rem;
+    }
+    @include descktop{
+        font-size: 2rem;
+    }
+}
+.formulario{
+    color: white;
+    font-family: 'Lato',sans-serif;
+    font-size: 1.8rem;
+    background-color: #006845;
+    height: auto;
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 1rem 1rem;
+}
+.iconosContacto{
+    width: 5%;
+}
+
+.mapa{
+    grid-area: mapa;
+    padding: 1rem 1rem 1rem 1rem;
+    height: 35rem;
+    @include tablet{
+        height: 40rem;
+    }
+    @include descktop{
+
+    }
+}
